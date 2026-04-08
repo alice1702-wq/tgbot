@@ -115,7 +115,7 @@ cases_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="🔥 У Дрысясиси сгорел дом", callback_data="scenario_house")],
     [InlineKeyboardButton(text="🦵 Хаги-Ваги поранился", callback_data="scenario_hagi")],
     [InlineKeyboardButton(text="🏍️ Ам-Ням разбил мотоцикл", callback_data="scenario_skibidi")],
-    [InlineKeyboardButton(text="🌴 Амонгус на Бали", callback_data="scenario_baly")],
+    [InlineKeyboardButton(text="🌴 Амогус на Бали", callback_data="scenario_baly")],
     [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_menu")]
 ])
 
@@ -788,11 +788,11 @@ async def skibidi_opt3(callback: CallbackQuery):
     await callback.answer()
 
 # --------------------------------------------------------------
-# Кейс 5: Амонгус на Бали (кража + отмена концерта)
+# Кейс 5: Амогус на Бали (кража + отмена концерта)
 # --------------------------------------------------------------
 @dp.callback_query(F.data == "scenario_baly")
 async def case_baly_start(callback: CallbackQuery):
-    await callback.message.answer_photo(photo="AgACAgIAAxkBAAOUac_QCVevGSvV2-BWqY6OGb8ZS5oAAokVaxudxnlKMC_plXWtAAFaAQADAgADeAADOwQ", caption="🌴 Кейс 5: Амонгус на Бали")
+    await callback.message.answer_photo(photo="AgACAgIAAxkBAAOUac_QCVevGSvV2-BWqY6OGb8ZS5oAAokVaxudxnlKMC_plXWtAAFaAQADAgADeAADOwQ", caption="🌴 Кейс 5: Амогус на Бали")
     await callback.message.answer_voice(voice="AwACAgIAAxkBAAOGac_PbUpkWmSiLpedanRv0Px_wzoAAmaVAAKdxnlK7QKmexAyFpg7BA", caption="Ситуация в голосовом")
     kb = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="1️⃣ Позвонить родителям", callback_data="baly_opt1")],
@@ -810,7 +810,7 @@ async def baly_opt1(callback: CallbackQuery):
     await callback.message.answer(
         "Хорошая туристическая страховка покрывает: кражу багажа и личных вещей (до определённой суммы, нужны чеки), "
         "а также отмену мероприятий, на которые был куплен билет, если это произошло не по вине путешественника. "
-        "Амонгусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
+        "Амогусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
         "и об отмене концерта (скриншот объявления, чек). Страховая выплатит компенсацию."
     )
     add_completed_scenario(callback.from_user.id, "baly")
@@ -826,7 +826,7 @@ async def baly_opt2(callback: CallbackQuery):
     await callback.message.answer(
         "Хорошая туристическая страховка покрывает: кражу багажа и личных вещей (до определённой суммы, нужны чеки), "
         "а также отмену мероприятий, на которые был куплен билет, если это произошло не по вине путешественника. "
-        "Амонгусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
+        "Амогусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
         "и об отмене концерта (скриншот объявления, чек). Страховая выплатит компенсацию."
     )
     add_completed_scenario(callback.from_user.id, "baly")
@@ -840,7 +840,7 @@ async def baly_opt3(callback: CallbackQuery):
     await callback.message.answer(
         "Хорошая туристическая страховка покрывает: кражу багажа и личных вещей (до определённой суммы, нужны чеки), "
         "а также отмену мероприятий, на которые был куплен билет, если это произошло не по вине путешественника. "
-        "Амонгусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
+        "Амогусу нужно позвонить в страховую по номеру из полиса, заявить о краже (взять справку в полиции) "
         "и об отмене концерта (скриншот объявления, чек). Страховая выплатит компенсацию."
     )
     add_completed_scenario(callback.from_user.id, "baly")
