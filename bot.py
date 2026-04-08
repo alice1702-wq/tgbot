@@ -1107,5 +1107,8 @@ async def main():
     print("Бот запущен")
     await dp.start_polling(bot)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    async def main():
+        await dp.start_polling(bot)
+
     asyncio.run(main())
